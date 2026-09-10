@@ -54,6 +54,8 @@ export async function getAllGameIds(db: Database): Promise<number[]> {
 - Always `order by` a stable column (title) so static builds are deterministic.
 - Map raw rows to the app-facing `Game`/`Publisher`/`Category` types in one place; don't leak Drizzle row shapes into components.
 - Keep ordering/lookup logic in `games.ts`, not in pages.
+- Every exported function in `db/` and `src/lib/` must have TSDoc/JSDoc covering its purpose, each parameter (including the injectable `db`), and its return value. Comments should explain data-layer intent and invariants rather than restating the query.
+- Keep documentation current when changing a schema, transform, migration helper, or data-access contract.
 
 ## Determinism
 

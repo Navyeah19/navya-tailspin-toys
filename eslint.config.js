@@ -40,4 +40,22 @@ export default [
       parser: tseslint.parser,
     },
   },
+
+  // Enforce the repository's documented TypeScript formatting conventions.
+  {
+    files: ["db/**/*.ts", "src/**/*.ts", "src/**/*.astro", "e2e-tests/**/*.ts"],
+    rules: {
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        { prefer: "type-imports", fixStyle: "separate-type-imports" },
+      ],
+      "comma-dangle": ["error", "always-multiline"],
+      curly: ["error", "multi-line"],
+      eqeqeq: ["error", "always"],
+      "eol-last": ["error", "always"],
+      "object-curly-spacing": ["error", "always"],
+      quotes: ["error", "single", { avoidEscape: true }],
+      semi: ["error", "always"],
+    },
+  },
 ];
