@@ -45,6 +45,7 @@ ALL UI components MUST use dark theme colors:
 - Prefer utility classes over custom CSS when possible
 - Use semantic grouping: layout, spacing, colors, typography
 - Keep utility combinations readable and maintainable
+- Follow the shared [coding standards](coding-standards.instructions.md) for any CSS comments: explain a non-obvious design constraint or decision, not the utility classes themselves.
 
 ## Modern UI Patterns
 
